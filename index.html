@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        background: rgb(39,41,52);
+        background: linear-gradient(90deg, rgba(39,41,52,1) 0%, rgba(38,45,85,1) 44%, rgba(49,59,114,1) 100%);
+      }
+      .grid {
+        padding-top: 2%;
+        display: grid;
+        grid-template-columns: repeat(11, 120px);
+        grid-template-rows: repeat(6, 120px);
+        gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 76%;
+      }
+      .grid-item {
+        cursor: pointer;
+        -webkit-box-shadow: 0px 4px 23px -1px rgba(0,0,0,0.93); 
+        box-shadow: 0px 4px 23px -1px rgba(0,0,0,0.93);
+        text-align: center;
+        background-color: #90FCF9;
+        padding: 10px;
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .explain {
+        padding: 3% 5% 1% 12%;
+        color:white;
+        font-size : 22px;
+      }
+      .name {
+        background-color: #587291;
+        color: white;
+        cursor: context-menu;
+      }
+      .easy {
+        background-color: #63B4D1;
+      }
+      .medium {
+        background-color: #7699D4;
+      }
+      .hard {
+        background-color: #9448BC;
+      }
+      #colonne {
+        padding: 1%;
+        border-radius: 16px;
+        margin-left: 12%;
+      }
+      @media (max-width: 1180px) {
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 24px;
+          background: rgb(39,41,52);
+        }
+        .grid {
+          padding-top: 2%;
+          display: grid;
+          grid-template-columns: repeat(11, 100px);
+          grid-template-rows: repeat(5, 100px);
+          gap: 10px;
+          width: 104%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="grid-item name" style="font-size: 16px;">Harry Potter (Cindy)</div>
+      <div class="grid-item" id="1" onclick="myFunction(this.id)">1</div>
+      <div class="grid-item" id="2" onclick="myFunction(this.id)">2</div>
+      <div class="grid-item" id="3" onclick="myFunction(this.id)">3</div>
+      <div class="grid-item" id="4" onclick="myFunction(this.id)">4</div>
+      <div class="grid-item" id="5" onclick="myFunction(this.id)">5</div>
+      <div class="grid-item" id="6" onclick="myFunction(this.id)">6</div>
+      <div class="grid-item medium" id="7" onclick="myFunction(this.id)">7</div>
+      <div class="grid-item medium" id="8" onclick="myFunction(this.id)">8</div>
+      <div class="grid-item medium" id="9" onclick="myFunction(this.id)">9</div>
+      <div class="grid-item hard" id="10" onclick="myFunction(this.id)">10</div>
+      <div class="grid-item name" style="font-size: 16px;">Les spécialités françaises (Clément)</div>
+      <div class="grid-item" id="11" onclick="myFunction(this.id)">11</div>
+      <div class="grid-item" id="12" onclick="myFunction(this.id)">12</div>
+      <div class="grid-item" id="13" onclick="myFunction(this.id)">13</div>
+      <div class="grid-item" id="14" onclick="myFunction(this.id)">14</div>
+      <div class="grid-item" id="15" onclick="myFunction(this.id)">15</div>
+      <div class="grid-item" id="16" onclick="myFunction(this.id)">16</div>
+      <div class="grid-item medium" id="17" onclick="myFunction(this.id)">17</div>
+      <div class="grid-item medium" id="18" onclick="myFunction(this.id)">18</div>
+      <div class="grid-item medium" id="19" onclick="myFunction(this.id)">19</div>
+      <div class="grid-item hard" id="20" onclick="myFunction(this.id)">20</div>
+      <div class="grid-item name" style="font-size: 16px;">Les grands classique de Walt Disney (Lisette)</div>
+      <div class="grid-item" id="21" onclick="myFunction(this.id)">21</div>
+      <div class="grid-item" id="22" onclick="myFunction(this.id)">22</div>
+      <div class="grid-item" id="23" onclick="myFunction(this.id)">23</div>
+      <div class="grid-item" id="24" onclick="myFunction(this.id)">24</div>
+      <div class="grid-item" id="25" onclick="myFunction(this.id)">25</div>
+      <div class="grid-item" id="26" onclick="myFunction(this.id)">26</div>
+      <div class="grid-item medium" id="27" onclick="myFunction(this.id)">27</div>
+      <div class="grid-item medium" id="28" onclick="myFunction(this.id)">28</div>
+      <div class="grid-item medium" id="29" onclick="myFunction(this.id)">29</div>
+      <div class="grid-item hard" id="30" onclick="myFunction(this.id)">30</div>
+      <div class="grid-item name" style="font-size: 16px;">Les films Marvel (Lilas)</div>
+      <div class="grid-item" id="31" onclick="myFunction(this.id)">31</div>
+      <div class="grid-item" id="32" onclick="myFunction(this.id)">32</div>
+      <div class="grid-item" id="33" onclick="myFunction(this.id)">33</div>
+      <div class="grid-item" id="34" onclick="myFunction(this.id)">34</div>
+      <div class="grid-item" id="35" onclick="myFunction(this.id)">35</div>
+      <div class="grid-item" id="36" onclick="myFunction(this.id)">36</div>
+      <div class="grid-item medium" id="37" onclick="myFunction(this.id)">37</div>
+      <div class="grid-item medium" id="38" onclick="myFunction(this.id)">38</div>
+      <div class="grid-item medium" id="39" onclick="myFunction(this.id)">39</div>
+      <div class="grid-item hard" id="40" onclick="myFunction(this.id)">40</div>
+      <div class="grid-item name" style="font-size: 16px;">Les films cultes entre 1980 et 2010 (Michel)</div>
+      <div class="grid-item" id="41" onclick="myFunction(this.id)">41</div>
+      <div class="grid-item" id="42" onclick="myFunction(this.id)">42</div>
+      <div class="grid-item" id="43" onclick="myFunction(this.id)">43</div>
+      <div class="grid-item" id="44" onclick="myFunction(this.id)">44</div>
+      <div class="grid-item" id="45" onclick="myFunction(this.id)">45</div>
+      <div class="grid-item" id="46" onclick="myFunction(this.id)">46</div>
+      <div class="grid-item medium" id="47" onclick="myFunction(this.id)">47</div>
+      <div class="grid-item medium" id="48" onclick="myFunction(this.id)">48</div>
+      <div class="grid-item medium" id="49" onclick="myFunction(this.id)">49</div>
+      <div class="grid-item hard" id="50" onclick="myFunction(this.id)">50</div>
+      <div class="grid-item name">Voyage (Coralie)</div>
+      <div class="grid-item" id="51" onclick="myFunction(this.id)">51</div>
+      <div class="grid-item" id="52" onclick="myFunction(this.id)">52</div>
+      <div class="grid-item" id="53" onclick="myFunction(this.id)">53</div>
+      <div class="grid-item" id="54" onclick="myFunction(this.id)">54</div>
+      <div class="grid-item" id="55" onclick="myFunction(this.id)">55</div>
+      <div class="grid-item" id="56" onclick="myFunction(this.id)">56</div>
+      <div class="grid-item medium" id="57" onclick="myFunction(this.id)">57</div>
+      <div class="grid-item medium" id="58" onclick="myFunction(this.id)">58</div>
+      <div class="grid-item medium" id="59" onclick="myFunction(this.id)">59</div>
+      <div class="grid-item hard" id="60" onclick="myFunction(this.id)">60</div>
+    </div>
+
+    <div class="explain">
+      - 10 questions par thème<br>
+      - Les 6 premières questions de chaque thèmes et répondable uniquement par la personne qui à choisit le thème, ces questions valent 1 point<br>
+      - A partir du 5ème tour vous pouvez séléctionner une question d'un autre thème.
+      - Vous n'avez pas le droit de séléctionner deux fois le même thème
+      - Les questions bleu foncées valent 2 points
+      - Les questions mauves valent 3 points<br>
+    </div>
+
+    <button onclick="columns()" id="colonne">Désactiver les 4 dernières colonnes</button>
+
+    <script>
+      function myFunction(clicked_id) {
+        if (document.getElementById(clicked_id).style.backgroundColor !== "gray")
+          document.getElementById(clicked_id).style.backgroundColor = "gray";
+        else if (clicked_id.includes('7')) {
+          document.getElementById(clicked_id).style.backgroundColor = "#7699D4";
+        } else if (clicked_id.includes('8')) {
+          document.getElementById(clicked_id).style.backgroundColor = "#7699D4";
+        } else if (clicked_id.includes('9')) {
+          document.getElementById(clicked_id).style.backgroundColor = "#7699D4";
+        } else if (clicked_id.includes('0')) {
+          document.getElementById(clicked_id).style.backgroundColor = "#9448BC";
+        } else {
+          document.getElementById(clicked_id).style.backgroundColor = "#90FCF9";
+        }
+      }
+
+      function columns() {
+        if (document.getElementById("colonne").innerHTML === "Désactiver les 4 dernières colonnes") {
+          document.getElementById("colonne").innerHTML = "Activer les 4 dernières colonnes"
+          document.getElementById("7").style.backgroundColor = "gray"
+          document.getElementById("17").style.backgroundColor = "gray"
+          document.getElementById("27").style.backgroundColor = "gray"
+          document.getElementById("37").style.backgroundColor = "gray"
+          document.getElementById("47").style.backgroundColor = "gray"
+          document.getElementById("57").style.backgroundColor = "gray"
+          document.getElementById("8").style.backgroundColor = "gray"
+          document.getElementById("18").style.backgroundColor = "gray"
+          document.getElementById("28").style.backgroundColor = "gray"
+          document.getElementById("38").style.backgroundColor = "gray"
+          document.getElementById("48").style.backgroundColor = "gray"
+          document.getElementById("58").style.backgroundColor = "gray"
+          document.getElementById("9").style.backgroundColor = "gray"
+          document.getElementById("19").style.backgroundColor = "gray"
+          document.getElementById("29").style.backgroundColor = "gray"
+          document.getElementById("39").style.backgroundColor = "gray"
+          document.getElementById("49").style.backgroundColor = "gray"
+          document.getElementById("59").style.backgroundColor = "gray"
+          document.getElementById("10").style.backgroundColor = "gray"
+          document.getElementById("20").style.backgroundColor = "gray"
+          document.getElementById("30").style.backgroundColor = "gray"
+          document.getElementById("40").style.backgroundColor = "gray"
+          document.getElementById("50").style.backgroundColor = "gray"
+          document.getElementById("60").style.backgroundColor = "gray"
+        } else {
+          document.getElementById("colonne").innerHTML = "Désactiver les 4 dernières colonnes"
+          document.getElementById("7").style.backgroundColor = "#7699D4"
+          document.getElementById("17").style.backgroundColor = "#7699D4"
+          document.getElementById("27").style.backgroundColor = "#7699D4"
+          document.getElementById("37").style.backgroundColor = "#7699D4"
+          document.getElementById("47").style.backgroundColor = "#7699D4"
+          document.getElementById("57").style.backgroundColor = "#7699D4"
+          document.getElementById("8").style.backgroundColor = "#7699D4"
+          document.getElementById("18").style.backgroundColor = "#7699D4"
+          document.getElementById("28").style.backgroundColor = "#7699D4"
+          document.getElementById("38").style.backgroundColor = "#7699D4"
+          document.getElementById("48").style.backgroundColor = "#7699D4"
+          document.getElementById("58").style.backgroundColor = "#7699D4"
+          document.getElementById("9").style.backgroundColor = "#7699D4"
+          document.getElementById("19").style.backgroundColor = "#7699D4"
+          document.getElementById("29").style.backgroundColor = "#7699D4"
+          document.getElementById("39").style.backgroundColor = "#7699D4"
+          document.getElementById("49").style.backgroundColor = "#7699D4"
+          document.getElementById("59").style.backgroundColor = "#7699D4"
+          document.getElementById("10").style.backgroundColor = "#9448BC"
+          document.getElementById("20").style.backgroundColor = "#9448BC"
+          document.getElementById("30").style.backgroundColor = "#9448BC"
+          document.getElementById("40").style.backgroundColor = "#9448BC"
+          document.getElementById("50").style.backgroundColor = "#9448BC"
+          document.getElementById("60").style.backgroundColor = "#9448BC"
+        }
+      }
+      </script>
+  </body>
+</html>
